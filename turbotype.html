@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="turbotype.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Turbo Type</title>
+  </head>
+  <body>
+    <h1 class="heading">
+      <i class="fa-solid fa-bolt-lightning"></i> Turbo Type
+      <i class="fa-solid fa-bolt-lightning"></i>
+    </h1>
+
+    
+    <div class="mode-selector">
+      <div class="mode-group">
+        <span class="mode-label">Time:</span>
+        <button class="mode-btn time-btn active" onclick="setTimeMode(15)">15s</button>
+        <button class="mode-btn time-btn" onclick="setTimeMode(30)">30s</button>
+        <button class="mode-btn time-btn" onclick="setTimeMode(60)">60s</button>
+        <button class="mode-btn time-btn" onclick="setTimeMode(120)">120s</button>
+      </div>
+      <div class="mode-group">
+        <span class="mode-label">Words:</span>
+        <button class="mode-btn word-btn" onclick="setWordMode(10)">10</button>
+        <button class="mode-btn word-btn" onclick="setWordMode(25)">25</button>
+        <button class="mode-btn word-btn" onclick="setWordMode(50)">50</button>
+        <button class="mode-btn word-btn" onclick="setWordMode(100)">100</button>
+      </div>
+    </div>
+
+    <main>
+      
+      <div class="header">
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-label">WPM</div>
+            <div class="stat-value" id="wpm">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Accuracy</div>
+            <div class="stat-value" id="accuracy">100%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Errors</div>
+            <div class="stat-value" id="errors">0</div>
+          </div>
+        </div>
+        <div class="timer" id="timer">30</div>
+        <div class="button" id="new">
+          <button><i class="fa-solid fa-rotate-right"></i> New Game</button>
+        </div>
+      </div>
+
+      
+      <div id="game">
+        <div id="words"></div>
+        <span id="start">Click to start or press any key</span>
+      </div>
+    </main>
+  </body>
+
+  <script src="turbotype.js"></script>
+</html>
